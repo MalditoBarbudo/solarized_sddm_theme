@@ -1,5 +1,7 @@
 # Solarized theme for sddm
 
+**NOTE: This is alpha state theme, everything can happen if you try it**
+
 This theme is based on Numix sddm theme
 ([https://github.com/intialonso/intialonso.github.io/tree/master/themes/sddm/numix](https://github.com/intialonso/intialonso.github.io/tree/master/themes/sddm/numix))
 by Inti Alonso.  As in Numix theme, the wallpaper was generated using the tool:
