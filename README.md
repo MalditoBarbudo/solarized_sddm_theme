@@ -10,3 +10,7 @@ The aim of this theme is to display a simple yet complete sddm greeter based in
 solarized palette by Ethan Schoonover
 ([http://ethanschoonover.com/solarized](http://ethanschoonover.com/solarized)).  
 I use this colors almost everywhere so, why not in the greeter? ;)
+
+## Dependencies
+This theme relies in `Raleway` and `Fontawesome` fonts. If you try this, make sure
+that they are installed in your system.

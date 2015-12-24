@@ -91,11 +91,17 @@ Rectangle {
         Row {
             anchors.fill: parent
 
+            Rectangle{
+                width: parent.width / 3; height: parent.height
+                color: "transparent"
+            }
+
+
             Rectangle {
                 width: parent.width / 3; height: parent.height
                 color: "transparent"
                 anchors.verticalCenter: parent.verticalCenter
-                //anchors.verticalCenterOffset:-300
+                anchors.verticalCenterOffset:200
 
                 Clock {
                     id: clock
@@ -109,14 +115,9 @@ Rectangle {
             Rectangle {
                 width: parent.width / 3; height: parent.height
                 color: "transparent"
-            }
-
-            Rectangle {
-                width: parent.width / 3; height: parent.height
-                color: "transparent"
                 clip: true
                 anchors.verticalCenter: parent.verticalCenter
-                //anchors.verticalCenterOffset:300
+                anchors.verticalCenterOffset:200
 
                 Item {
                     id: usersContainer
@@ -187,8 +188,8 @@ Rectangle {
                             font.pixelSize: 14
                             color: "#25000000"
                             borderColor: "transparent"
-                            tooltipBG: "lightgrey"
-                            //image: "warning.svg"
+                            tooltipBG: "#25000000"
+                            image: "warning.svg"
 
                             KeyNavigation.backtab: name; KeyNavigation.tab: session
 
@@ -207,7 +208,10 @@ Rectangle {
                         anchors.right: columnPassword.right
                         anchors.top: columnPassword.bottom
                         anchors.topMargin: 20
-                        color: "red"
+                        color: "#268bd2"
+                        disabledColor: "#dc322f"
+                        activeColor: "#268bd2"
+                        pressedColor: "#2aa198"
                         textColor: "black"
                         font: textFont.name
 
@@ -228,7 +232,7 @@ Rectangle {
             anchors.top: parent.top;
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width; height: 40
-            color: "#35000000"
+            color: "transparent"
 
             Row {
                 anchors.left: parent.left
@@ -240,11 +244,13 @@ Rectangle {
                     height: parent.height
                     anchors.verticalCenter: parent.verticalCenter
 
-                    text: textConstants.session
+                    //text: textConstants.session
+                    text: ""
                     font.family: textFont.name
                     font.pixelSize: 16
+                    font.bold: true
                     verticalAlignment: Text.AlignVCenter
-                    color: "#DEDEDE"
+                    color: "#b58900"
                 }
 
                 ComboBox {
@@ -252,31 +258,18 @@ Rectangle {
                     width: 245
                     height: 20
                     anchors.verticalCenter: parent.verticalCenter
-                    //style: ComboBoxStyle {
-                    //    id: comboBox
-                    //    background: Rectangle {
-                    //        id: rectCategory
-                    //        radius: 5
-                    //        border.width: 2
-                    //        color: "#fff"
-                    //    }
-                    //    label: Text {
-                    //        verticalAlignment: Text.AlignVCenter
-                    //        horizontalAlignment: Text.AlignHCenter
-                    //        font.pointSize: 15
-                    //        font.family: textFont.name
-                    //        font.capitalization: Font.SmallCaps
-                    //        color: "black"
-                    //        text: control.currentText
-                    //    }
-                    //}
-
-                    arrowIcon: "angle-down.png"
+                    color: "#25000000"
+                    textColor: "#b58900"
+                    borderColor: "transparent"
+                    hoverColor: "#073642"
+                    arrowIcon: "angle-down.svg"
+                    //arrowColor: "#25000000"
 
                     model: sessionModel
                     index: sessionModel.lastIndex
                     font.family: textFont.name
                     font.pixelSize: 14
+                    //dropDown.color: "transparent"
 
                     KeyNavigation.tab: layoutBox
                 }
@@ -285,23 +278,69 @@ Rectangle {
                     height: parent.height
                     anchors.verticalCenter: parent.verticalCenter
 
-                    text: textConstants.layout
+                    //text: textConstants.layout
+                    text: ""
                     font.family: textFont.name
                     font.pixelSize: 16
+                    font.bold: true
                     verticalAlignment: Text.AlignVCenter
-                    color: "#DEDEDE"
+                    color: "#b58900"
                 }
 
-                LayoutBox {
+                //LayoutBox {
+                //    id: layoutBox
+                //    width: 90
+                //    height: 20
+                //    anchors.verticalCenter: parent.verticalCenter
+                //    font.family: textFont.name
+                //    font.pixelSize: 14
+                //    color: "#25000000"
+                //    textColor: "#b58900"
+                //    borderColor: "transparent"
+
+                //    arrowIcon: "angle-down.svg"
+
+                //    KeyNavigation.backtab: session; KeyNavigation.tab: btnShutdown
+                //}
+                ComboBox {
                     id: layoutBox
-                    width: 90
+
+                    model: keyboard.layouts
+                    index: keyboard.currentLayout
+                    width: 50
                     height: 20
                     anchors.verticalCenter: parent.verticalCenter
-                    font.family: textFont.name
-                    font.pixelSize: 14
+                    color: "#25000000"
+                    textColor: "#b58900"
+                    borderColor: "transparent"
+                    hoverColor: "#073642"
+                    arrowIcon: "angle-down.svg"
+                    //arrowColor: "#25000000"
 
-                    arrowIcon: "angle-down.png"
+                    onValueChanged: keyboard.currentLayout = id
 
+                    Connections {
+                        target: keyboard
+
+                        onCurrentLayoutChanged: combo.index = keyboard.currentLayout
+                    }
+
+                    rowDelegate: Rectangle {
+                        color: "transparent"
+
+                        Text {
+                            anchors.margins: 4
+                            anchors.top: parent.top
+                            anchors.bottom: parent.bottom
+
+                            verticalAlignment: Text.AlignVCenter
+
+                            text: modelItem ? modelItem.modelData.shortName : "zz"
+                            font.family: textFont.name
+                            font.pixelSize: 14
+                            color: "#b58900"
+                        }
+                    }
                     KeyNavigation.backtab: session; KeyNavigation.tab: btnShutdown
                 }
             }
@@ -309,6 +348,7 @@ Rectangle {
             Row {
                 height: parent.height
                 anchors.right: parent.right
+                //anchors.left: actionBar.right
                 anchors.margins: 5
                 spacing: 10
 
