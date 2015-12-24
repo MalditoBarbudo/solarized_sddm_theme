@@ -6,7 +6,7 @@ by Inti Alonso.  As in Numix theme, the wallpaper was generated using the tool:
 [http://matthew.wagerfield.com/flat-surface-shader/](http://matthew.wagerfield.com/flat-surface-shader/)
 by Matthew Wagerfield and Tobias van Schneider. It also uses some icons from
 Numix icon theme [https://github.com/numixproject/numix-icon-theme](https://github.com/numixproject/numix-icon-theme)
-(shutdown, reboot and down arrow icons).  
+(shutdown, reboot, warning and down arrow icons).  
 QML files contain license headers.  
 
 ## Aim
