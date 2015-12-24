@@ -92,23 +92,31 @@ Rectangle {
             anchors.fill: parent
 
             Rectangle {
-                width: parent.width / 2; height: parent.height
-                color: "#00000000"
+                width: parent.width / 3; height: parent.height
+                color: "transparent"
+                anchors.verticalCenter: parent.verticalCenter
+                //anchors.verticalCenterOffset:-300
 
                 Clock {
                     id: clock
                     anchors.centerIn: parent
-                    color: "white"
+                    color: "black"
                     timeFont.family: textFont.name
                     dateFont.family: textFont.name
                 }
             }
 
             Rectangle {
-                width: parent.width / 3; height: parent.height /3;
-                color: "#35000000"
+                width: parent.width / 3; height: parent.height
+                color: "transparent"
+            }
+
+            Rectangle {
+                width: parent.width / 3; height: parent.height
+                color: "transparent"
                 clip: true
                 anchors.verticalCenter: parent.verticalCenter
+                //anchors.verticalCenterOffset:300
 
                 Item {
                     id: usersContainer
@@ -130,7 +138,7 @@ Rectangle {
                             font.family: textFont.name
                             font.bold: true
                             font.pixelSize: 16
-                            color: "#DEDEDE"
+                            color: "black"
                             }
 
                             TextBox {
@@ -139,7 +147,9 @@ Rectangle {
                             text: userModel.lastUser
                             font.family: textFont.name
                             font.pixelSize: 14
-                            textColor: "#2D2D2D"
+                            color: "#25000000"
+                            borderColor: "transparent"
+                            textColor: "black"
 
                             KeyNavigation.backtab: btnReboot; KeyNavigation.tab: password
 
@@ -167,7 +177,7 @@ Rectangle {
                             font.family: textFont.name
                             font.bold: true
                             font.pixelSize: 16
-                            color: "#DEDEDE"
+                            color: "black"
                             }
 
                             PasswordBox {
@@ -175,7 +185,10 @@ Rectangle {
                             width: parent.width; height: 30
                             font.family: textFont.name
                             font.pixelSize: 14
+                            color: "#25000000"
+                            borderColor: "transparent"
                             tooltipBG: "lightgrey"
+                            //image: "warning.svg"
 
                             KeyNavigation.backtab: name; KeyNavigation.tab: session
 
@@ -194,7 +207,9 @@ Rectangle {
                         anchors.right: columnPassword.right
                         anchors.top: columnPassword.bottom
                         anchors.topMargin: 20
-                        color: "#1A80B6"
+                        color: "red"
+                        textColor: "black"
+                        font: textFont.name
 
                         onClicked: sddm.login(name.text, password.text, session.index)
 
