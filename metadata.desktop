@@ -1,6 +1,6 @@
 [SddmGreeterTheme]
-Name=sddm_theme
-Description=sddm_theme
+Name=Simple
+Description=Simple theme for sddm
 Author=Víctor Granda
 Copyright=(c) 2015, Víctor Granda
 License=CC-BY-SA
@@ -11,6 +11,6 @@ Screenshot=
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Email=
-Theme-Id=sddm_theme
+Email=victorgrandagarcia@gmail.com
+Theme-Id=simple_sddm_theme
 Theme-API=2.0
