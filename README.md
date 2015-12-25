@@ -30,5 +30,3 @@ that they are installed in your system.
 1. White arrows background in session and layout boxes (see bug #1).
    Fix is in [upstream](https://github.com/sddm/sddm), waiting for it in
    the stable version.
-
-2. Failed login not showing warning message (see bug #3). Working on it.

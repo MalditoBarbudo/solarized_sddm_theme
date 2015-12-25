@@ -46,8 +46,8 @@ Rectangle {
     }
 
     onLoginFailed: {
-      txtMessage.text = textConstants.loginFailed
-      listView.currentItem.password.text = ""
+      errorMessage.color = "#dc322f"
+      errorMessage.text = textConstants.loginFailed
     }
   }
 
@@ -140,6 +140,14 @@ Rectangle {
                 event.accepted = true
               }
             }
+          }
+          Text {
+            id: errorMessage
+            //anchors.horizontalCenter: parent.horizontalCenter
+            anchors.left: name.left
+            text: textConstants.prompt
+            font.family: textFont.name
+            font.pixelSize: 12
           }
         }
 
