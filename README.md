@@ -11,7 +11,20 @@ Numix icon theme [https://github.com/numixproject/numix-icon-theme](https://gith
 (shutdown, warning and down arrow icons).  
 QML files contain license headers.  
 
-## Screenshot (2015-25-12)
+## Dependencies
+This theme relies in `Raleway` and `Fontawesome` fonts. If you try this, make sure
+that they are installed in your system.
+
+In arch this fonts can be installed from aur:  
+
+- [otf-raleway](https://aur.archlinux.org/packages/otf-raleway/)  
+- [ttf-font-awesome](https://aur.archlinux.org/packages/ttf-font-awesome)  
+
+`Raleway` also can be installed with
+[ttf-google-fonts-git](https://aur.archlinux.org/packages/ttf-google-fonts-git/)
+which also installs other cool fonts.
+
+## Screenshot (2015-12-25)
 
 ![screenshot](solarized_sddm_theme.png)
 
@@ -20,10 +33,6 @@ The aim of this theme is to display a simple yet complete sddm greeter based in
 solarized palette by Ethan Schoonover
 ([http://ethanschoonover.com/solarized](http://ethanschoonover.com/solarized)).  
 I use this colors almost everywhere so, why not in the greeter? ;)
-
-## Dependencies
-This theme relies in `Raleway` and `Fontawesome` fonts. If you try this, make sure
-that they are installed in your system.
 
 ## Known Issues
 
