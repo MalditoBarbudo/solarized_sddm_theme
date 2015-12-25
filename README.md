@@ -11,6 +11,10 @@ Numix icon theme [https://github.com/numixproject/numix-icon-theme](https://gith
 (shutdown, reboot, warning and down arrow icons).  
 QML files contain license headers.  
 
+## Screenshot (2015-25-12)
+
+[!](solarized_sddm_theme.png)
+
 ## Aim
 The aim of this theme is to display a simple yet complete sddm greeter based in
 solarized palette by Ethan Schoonover
