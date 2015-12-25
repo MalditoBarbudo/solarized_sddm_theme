@@ -80,39 +80,39 @@ Rectangle {
                 onLogin: sddm.login(model.name, password, sessionIndex);
 
                 MouseArea {
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onEntered: listView.currentIndex = index
-                    onClicked: listView.focus = true
+                  anchors.fill: parent
+                  hoverEnabled: true
+                  onEntered: listView.currentIndex = index
+                  onClicked: listView.focus = true
                 }
+              }
             }
-        }
 
-        Row {
-            anchors.fill: parent
+            Row {
+              anchors.fill: parent
 
-            Rectangle{
+              Rectangle{
                 width: parent.width / 3; height: parent.height
                 color: "transparent"
-            }
+              }
 
 
-            Rectangle {
+              Rectangle {
                 width: parent.width / 3; height: parent.height
                 color: "transparent"
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.verticalCenterOffset:200
 
                 Clock {
-                    id: clock
-                    anchors.centerIn: parent
-                    color: "black"
-                    timeFont.family: textFont.name
-                    dateFont.family: textFont.name
+                  id: clock
+                  anchors.centerIn: parent
+                  color: "black"
+                  timeFont.family: textFont.name
+                  dateFont.family: textFont.name
                 }
-            }
+              }
 
-            Rectangle {
+              Rectangle {
                 width: parent.width / 3; height: parent.height
                 color: "transparent"
                 clip: true
@@ -120,87 +120,87 @@ Rectangle {
                 anchors.verticalCenterOffset:200
 
                 Item {
-                    id: usersContainer
-                    width: parent.width; height: 200
-                    anchors.margins: 5
+                  id: usersContainer
+                  width: parent.width; height: 200
+                  anchors.margins: 5
+                  anchors.verticalCenter: parent.verticalCenter
+
+                  Column {
+                    width: parent.width / 3;
+                    anchors.right: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
+                    spacing: 10
+                    anchors.margins: 10
 
-                        Column {
-                        width: parent.width / 3;
-                        anchors.right: parent.horizontalCenter
-                        anchors.verticalCenter: parent.verticalCenter
-                        spacing: 10
-                        anchors.margins: 10
+                    Text {
+                      id: lblName
+                      width: parent.width
+                      text: textConstants.userName
+                      font.family: textFont.name
+                      font.bold: true
+                      font.pixelSize: 16
+                      color: "black"
+                    }
 
-                            Text {
-                            id: lblName
-                            width: parent.width
-                            text: textConstants.userName
-                            font.family: textFont.name
-                            font.bold: true
-                            font.pixelSize: 16
-                            color: "black"
-                            }
+                    TextBox {
+                      id: name
+                      width: parent.width; height: 30
+                      text: userModel.lastUser
+                      font.family: textFont.name
+                      font.pixelSize: 14
+                      color: "#25000000"
+                      borderColor: "transparent"
+                      textColor: "black"
 
-                            TextBox {
-                            id: name
-                            width: parent.width; height: 30
-                            text: userModel.lastUser
-                            font.family: textFont.name
-                            font.pixelSize: 14
-                            color: "#25000000"
-                            borderColor: "transparent"
-                            textColor: "black"
+                      KeyNavigation.backtab: btnReboot; KeyNavigation.tab: password
 
-                            KeyNavigation.backtab: btnReboot; KeyNavigation.tab: password
-
-                            Keys.onPressed: {
-                            if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                                sddm.login(name.text, password.text, session.index)
-                                event.accepted = true
-                            }
-                            }
-                            }
+                      Keys.onPressed: {
+                        if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                          sddm.login(name.text, password.text, session.index)
+                          event.accepted = true
                         }
+                      }
+                    }
+                  }
 
-                        Column {
-                        id: columnPassword
-                        width: parent.width / 3;
-                        anchors.left: parent.horizontalCenter
-                        anchors.verticalCenter: parent.verticalCenter
-                        spacing: 10
-                        anchors.margins: 10
+                  Column {
+                    id: columnPassword
+                    width: parent.width / 3;
+                    anchors.left: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    spacing: 10
+                    anchors.margins: 10
 
-                            Text {
-                            id: lblPassword
-                            width: parent.width
-                            text: textConstants.password
-                            font.family: textFont.name
-                            font.bold: true
-                            font.pixelSize: 16
-                            color: "black"
-                            }
+                    Text {
+                      id: lblPassword
+                      width: parent.width
+                      text: textConstants.password
+                      font.family: textFont.name
+                      font.bold: true
+                      font.pixelSize: 16
+                      color: "black"
+                    }
 
-                            PasswordBox {
-                            id: password
-                            width: parent.width; height: 30
-                            font.family: textFont.name
-                            font.pixelSize: 14
-                            color: "#25000000"
-                            borderColor: "transparent"
-                            tooltipBG: "#25000000"
-                            image: "warning.svg"
+                    PasswordBox {
+                      id: password
+                      width: parent.width; height: 30
+                      font.family: textFont.name
+                      font.pixelSize: 14
+                      color: "#25000000"
+                      borderColor: "transparent"
+                      tooltipBG: "#25000000"
+                      image: "warning.svg"
 
-                            KeyNavigation.backtab: name; KeyNavigation.tab: session
+                      KeyNavigation.backtab: name; KeyNavigation.tab: session
 
-                            Keys.onPressed: {
-                            if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                                sddm.login(name.text, password.text, session.index)
-                                event.accepted = true
-                            }
-                            }
-                            }
+                      Keys.onPressed: {
+                        if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                          sddm.login(name.text, password.text, session.index)
+                          event.accepted = true
                         }
+                      }
+                    }
+                  }
                         Button {
                         id: loginButton
                         text: textConstants.login
