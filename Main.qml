@@ -169,7 +169,7 @@ Rectangle {
             textColor: "black"
             tooltipBG: "#25000000"
             tooltipFG: "#dc322f"
-            image: "warning_red.svg"
+            image: "warning_red.png"
 
             Keys.onPressed: {
               if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
