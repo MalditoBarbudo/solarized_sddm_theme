@@ -37,3 +37,8 @@ I use this colors almost everywhere so, why not in the greeter? ;)
 1. White arrows background in session and layout boxes (see bug #1).
    Fix is in [upstream](https://github.com/sddm/sddm), waiting for it in
    the stable version.
+
+## License
+
+Theme is licensed under GPL.  
+QML files are MIT licensed.
