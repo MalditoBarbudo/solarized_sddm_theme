@@ -1,13 +1,12 @@
 # Solarized theme for sddm
 
-**NOTE: This is alpha state theme, everything can happen if you try it**
-
 This theme is inspired by Numix sddm theme
 ([https://github.com/intialonso/intialonso.github.io](https://github.com/intialonso/intialonso.github.io/tree/master/themes/sddm/numix))
 by Inti Alonso and the default sddm theme, maui ([https://github.com/sddm/sddm](https://github.com/sddm/sddm)). As in Numix theme, the wallpaper was generated using the tool:
 [http://matthew.wagerfield.com/flat-surface-shader/](http://matthew.wagerfield.com/flat-surface-shader/)
 by Matthew Wagerfield and Tobias van Schneider. It also uses some icons from
-Numix icon theme [https://github.com/numixproject/numix-icon-theme](https://github.com/numixproject/numix-icon-theme)
+Numix icon theme
+[https://github.com/numixproject/numix-icon-theme](https://github.com/numixproject/numix-icon-theme)
 (shutdown, warning and down arrow icons).  
 QML files contain license headers.  
 
@@ -19,10 +18,9 @@ In arch this fonts can be installed from aur:
 
 - [otf-raleway](https://aur.archlinux.org/packages/otf-raleway/)  
 - [ttf-font-awesome](https://aur.archlinux.org/packages/ttf-font-awesome)  
-
-`Raleway` also can be installed with
-[ttf-google-fonts-git](https://aur.archlinux.org/packages/ttf-google-fonts-git/)
-which also installs other cool fonts.
+- `Raleway` also can be installed with
+  [ttf-google-fonts-git](https://aur.archlinux.org/packages/ttf-google-fonts-git/)
+  which also installs other cool fonts.
 
 ## Screenshot (2015-12-25)
 
