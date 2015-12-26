@@ -18,7 +18,7 @@ In arch this fonts can be installed from aur:
 
 - [otf-raleway](https://aur.archlinux.org/packages/otf-raleway/)  
 - [ttf-font-awesome](https://aur.archlinux.org/packages/ttf-font-awesome)  
-- `Raleway` also can be installed with
+- `Raleway` also can be installed from
   [ttf-google-fonts-git](https://aur.archlinux.org/packages/ttf-google-fonts-git/)
   which also installs other cool fonts.
 
