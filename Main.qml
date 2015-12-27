@@ -362,4 +362,11 @@ Rectangle {
       }
     }
   }
+
+  Component.onCompleted: {
+        if (name.text == "")
+            name.focus = true
+        else
+            password.focus = true
+    }
 }
