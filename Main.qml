@@ -141,6 +141,8 @@ Rectangle {
                 event.accepted = true
               }
             }
+
+            KeyNavigation.backtab: layoutBox; KeyNavigation.tab: password
           }
           Text {
             id: errorMessage
@@ -186,6 +188,8 @@ Rectangle {
                 event.accepted = true
               }
             }
+
+            KeyNavigation.backtab: name; KeyNavigation.tab: loginButton
           }
 
           Button {
@@ -201,6 +205,8 @@ Rectangle {
             font: textFont.name
 
             onClicked: sddm.login(name.text, password.text, session.index)
+
+            KeyNavigation.backtab: password; KeyNavigation.tab: btnReboot
           }
         }
       }
@@ -250,7 +256,7 @@ Rectangle {
         font.pixelSize: 14
         //dropDown.color: "transparent"
 
-        KeyNavigation.tab: layoutBox
+        KeyNavigation.backtab: btnShutdown; KeyNavigation.tab: layoutBox
       }
 
       Text {
@@ -320,7 +326,7 @@ Rectangle {
             color: "#b58900"
           }
         }
-        KeyNavigation.backtab: session; KeyNavigation.tab: btnShutdown
+        KeyNavigation.backtab: session; KeyNavigation.tab: name
       }
     }
 
@@ -340,7 +346,7 @@ Rectangle {
 
         onClicked: sddm.reboot()
 
-        KeyNavigation.backtab: layoutBox; KeyNavigation.tab: btnShutdown
+        KeyNavigation.backtab: loginButton; KeyNavigation.tab: btnShutdown
       }
 
       ImageButton {
@@ -352,7 +358,7 @@ Rectangle {
 
         onClicked: sddm.powerOff()
 
-        KeyNavigation.backtab: btnReboot;
+        KeyNavigation.backtab: btnReboot; KeyNavigation.tab: session
       }
     }
   }
