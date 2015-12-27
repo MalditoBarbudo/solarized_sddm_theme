@@ -1,11 +1,11 @@
 [SddmGreeterTheme]
 Name=Solarized sddm theme
 Description=Solarized theme for sddm
-Author=Víctor Granda
-Copyright=(c) 2015, Víctor Granda
+Author=Víctor Granda García
+Copyright=(c) 2015, Víctor Granda García
 License=CC-BY-SA
 Type=sddm-theme
-Version=0.1.0
+Version=0.1.1
 Website=https://github.com/MalditoBarbudo/solarized_sddm_theme
 Screenshot=solarized_sddm_theme.png
 MainScript=Main.qml
