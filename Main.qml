@@ -53,7 +53,7 @@ Rectangle {
   }
 
   FontLoader {
-    id: textFont; name: "Raleway"
+    id: textFont; name: config.displayFont
   }
 
   Repeater {
@@ -74,9 +74,10 @@ Rectangle {
     anchors.fill: parent
     color: "transparent"
     // numix theme properties
-    property variant geometry: screenModel.geometry(screenModel.primary)
-    x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
-    //color: "transparent"
+    //property variant geometry: screenModel.geometry(screenModel.primary)
+    //x: geometry.x; y: geometry.y; width: geometry.width; height: geometry.height
+    // primary screen
+    //visible: primaryScreen
 
     Rectangle {
       id: clockContainer
@@ -120,6 +121,7 @@ Rectangle {
             id: lblName
             width: parent.width
             text: textConstants.userName
+            font.family: textFont.name
             font.bold: true
             font.pixelSize: 16
             color: "black"
@@ -165,6 +167,7 @@ Rectangle {
             id: lblPassword
             width: parent.width
             text: textConstants.password
+            font.family: textFont.name
             font.bold: true
             font.pixelSize: 16
             color: "black"
@@ -172,6 +175,7 @@ Rectangle {
 
           PasswordBox {
             id: password
+            focus: true
             width: parent.width
             font: textFont.name
             //font.pixelSize: 16
@@ -218,6 +222,8 @@ Rectangle {
     anchors.horizontalCenter: parent.horizontalCenter
     width: parent.width; height: 40
     color: "transparent"
+    // primary screen
+    //visible: primaryScreen
 
     Row {
       anchors.left: parent.left

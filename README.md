@@ -11,16 +11,27 @@ Numix icon theme
 QML files contain license headers.  
 
 ## Dependencies
-This theme relies in `Raleway` and `Fontawesome` fonts. If you try this, make sure
-that they are installed in your system.
+This theme relies in `Fontawesome` font. If you try this, make sure
+that they are installed in your system. In arch this font can be installed from
+aur:  
 
-In arch this fonts can be installed from aur:  
+- [ttf-font-awesome](https://aur.archlinux.org/packages/ttf-font-awesome)  
+
+## Fonts
+
+This theme uses by default `Raleway` font. If `Raleway` is not installed
+default sddm font is used. `Raleway` can be installed on arch from aur:
 
 - [otf-raleway](https://aur.archlinux.org/packages/otf-raleway/)  
-- [ttf-font-awesome](https://aur.archlinux.org/packages/ttf-font-awesome)  
 - `Raleway` also can be installed from
   [ttf-google-fonts-git](https://aur.archlinux.org/packages/ttf-google-fonts-git/)
   which also installs other cool fonts.
+
+If you want to try different fonts, or just use the
+one you love, or simply setting one really installed in your system you can
+modify the displayFont field in the`theme.conf` file (in the theme folder,
+usually in `/usr/share/sddm/themes/solarized-sddm-theme/`) with your exclusive
+font selection, but be careful, some fonts really don't look well in the theme.
 
 ## Screenshot (2015-12-25)
 
@@ -37,6 +48,9 @@ I use this colors almost everywhere so, why not in the greeter? ;)
 1. White arrows background in session and layout boxes (see bug #1).
    Fix is in [upstream](https://github.com/sddm/sddm), waiting for it in
    the stable version.
+
+2. Multimonitor issues. In some multimonitor configurations it may appear some
+   glitches in the theme. Working on it.
 
 ## License
 
