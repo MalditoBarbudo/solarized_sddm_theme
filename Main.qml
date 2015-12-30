@@ -175,7 +175,7 @@ Rectangle {
 
           PasswordBox {
             id: password
-            focus: true
+            //focus: true
             width: parent.width
             font: textFont.name
             //font.pixelSize: 16
