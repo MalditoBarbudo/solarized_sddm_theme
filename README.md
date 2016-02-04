@@ -2,10 +2,9 @@
 
 This theme is inspired by Numix sddm theme
 ([https://github.com/intialonso/intialonso.github.io](https://github.com/intialonso/intialonso.github.io/tree/master/themes/sddm/numix))
-by Inti Alonso and the default sddm theme, maui ([https://github.com/sddm/sddm](https://github.com/sddm/sddm)). As in Numix theme, the wallpaper was generated using the tool:
-[http://matthew.wagerfield.com/flat-surface-shader/](http://matthew.wagerfield.com/flat-surface-shader/)
-by Matthew Wagerfield and Tobias van Schneider. It also uses some icons from
-Numix icon theme
+by Inti Alonso and the default sddm theme, maui ([https://github.com/sddm/sddm](https://github.com/sddm/sddm)).
+Wallpaper was created using [inkscape](https://inkscape.org).
+It also uses some icons from Numix icon theme
 [https://github.com/numixproject/numix-icon-theme](https://github.com/numixproject/numix-icon-theme)
 (shutdown, warning and down arrow icons).  
 QML files contain license headers.  
@@ -17,9 +16,8 @@ solarized palette by Ethan Schoonover
 I use this colors almost everywhere so, why not in the greeter? ;)
 
 ## Dependencies
-This theme relies in `Fontawesome` font. If you try this, make sure
-that they are installed in your system. In arch this font can be installed from
-aur:  
+This theme relies in `Fontawesome` font. If you try this, make sure that it is
+installed in your system. In archlinux this font can be installed from aur:  
 
 - [ttf-font-awesome](https://aur.archlinux.org/packages/ttf-font-awesome)  
 
@@ -46,9 +44,9 @@ background=background.png
 displayFont="Montserrat"
 ```
 
-But be careful, some fonts really don't look well in the theme.
+But be careful, some fonts really don't mix well with the theme.
 
-## Screenshot (2015-12-25)
+## Screenshot (2016-02-04)
 
 ![screenshot](solarized_sddm_theme.png)
 
