@@ -21,6 +21,33 @@ installed in your system. In archlinux this font can be installed from aur:
 
 - [ttf-font-awesome](https://aur.archlinux.org/packages/ttf-font-awesome)  
 
+## Installation
+
+### Stable version
+
+#### Archlinux
+
+Theme can be installed from `solarized-sddm-theme`
+[aur package](https://aur.archlinux.org/packages/solarized-sddm-theme/). This
+package contains the latest stable version.
+
+#### Other linux distributions
+
+  > This theme has only been tested in archlinux. Theme should work in other
+    distributions like fedora or ubuntu, though, but use it at your own risk.
+
+For installing in other linux distributions you must get the latest stable version
+from [github](https://github.com/MalditoBarbudo/solarized_sddm_theme/releases)
+(`0.1.4` at the moment of writing):
+
+```
+# this command will download and untar the package
+wget --no-check-certificate https://github.com/MalditoBarbudo/solarized_sddm_theme/archive/0.1.4.tar.gz -O - | tar xz
+```
+
+and copy the created theme folder to `/usr/share/sddm/themes`.
+Finally, don't forget to change the theme in `/etc/sddm.conf`.
+
 ## Fonts
 
 This theme uses by default `Raleway` font. If `Raleway` is not installed
@@ -35,8 +62,8 @@ default sddm font is used. `Raleway` can be installed on arch from aur:
 If you want to try different fonts, or just use the
 one you love, or simply setting one really installed in your system you can
 modify the displayFont field in the`theme.conf` file (in the theme folder,
-usually in `/usr/share/sddm/themes/solarized-sddm-theme/`) with your exclusive
-font selection. For example, to change to Montserrat font:
+usually in `/usr/share/sddm/themes/solarized-sddm-theme/` if installed from aur)
+with your exclusive font selection. For example, to change to Montserrat font:
 
 ```
 [General]
