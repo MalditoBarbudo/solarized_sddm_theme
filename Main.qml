@@ -254,7 +254,7 @@ Rectangle {
         borderColor: "transparent"
         hoverColor: "#073642"
         arrowIcon: "angle-down.svg"
-        //arrowColor: "#25000000"
+        arrowColor: "#25000000"
 
         model: sessionModel
         index: sessionModel.lastIndex
@@ -306,7 +306,7 @@ Rectangle {
         borderColor: "transparent"
         hoverColor: "#073642"
         arrowIcon: "angle-down.svg"
-        //arrowColor: "#25000000"
+        arrowColor: "#25000000"
 
         onValueChanged: keyboard.currentLayout = id
 
