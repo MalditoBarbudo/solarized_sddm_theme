@@ -73,7 +73,7 @@ displayFont="Montserrat"
 
 But be careful, some fonts really don't mix well with the theme.
 
-## Screenshot (2016-02-04)
+## Screenshot (2016-12-26)
 
 ![screenshot](solarized_sddm_theme.png)
 
