@@ -38,11 +38,11 @@ package contains the latest stable version.
 
 For installing in other linux distributions you must get the latest stable version
 from [github](https://github.com/MalditoBarbudo/solarized_sddm_theme/releases)
-(`0.1.4` at the moment of writing):
+(`0.1.6` at the moment of writing):
 
 ```
 # this command will download and untar the package
-wget --no-check-certificate https://github.com/MalditoBarbudo/solarized_sddm_theme/archive/0.1.4.tar.gz -O - | tar xz
+wget --no-check-certificate https://github.com/MalditoBarbudo/solarized_sddm_theme/archive/0.1.6.tar.gz -O - | tar xz
 ```
 
 and copy the created theme folder to `/usr/share/sddm/themes`.
@@ -77,13 +77,20 @@ But be careful, some fonts really don't mix well with the theme.
 
 ![screenshot](solarized_sddm_theme.png)
 
+## Former backgrounds
+
+With version 0.1.6 a new default background was introduced (`circles`). If you
+prefer the former background (`bars`) you can find it in the theme folder as
+`bars_background.png`. To use it change the `theme.conf` file accordingly:
+
+```
+[General]
+background=bars_background.png
+```
+
 ## Known Issues
 
-1. White arrows background in session and layout boxes (see bug #1).
-   Fix is in [sddm upstream](https://github.com/sddm/sddm), waiting for it in
-   the stable version.
-
-2. Multimonitor issues. In some multimonitor configurations it may appear some
+1. Multimonitor issues. In some multimonitor configurations it may appear some
    glitches in the theme. Working on it.
 
 ## License
