@@ -73,19 +73,26 @@ displayFont="Montserrat"
 
 But be careful, some fonts really don't mix well with the theme.
 
-## Screenshot (2016-12-26)
+## Screenshot (2017-12-24)
 
 ![screenshot](solarized_sddm_theme.png)
 
 ## Former backgrounds
 
-With version 0.1.6 a new default background was introduced (`circles`). If you
-prefer the former background (`bars`) you can find it in the theme folder as
-`bars_background.png`. To use it change the `theme.conf` file accordingly:
+With version 0.1.7 a new default background was introduced (`traces`). If you
+prefer the former backgrounds (`bars` or `circles`) you can find them in the
+theme folder as `bars_background.png` and `circles_background.png`.
+To use any of them change the `theme.conf` file accordingly:
 
 ```
 [General]
 background=bars_background.png
+```
+or
+
+```
+[General]
+background=circles_background.png
 ```
 
 ## Known Issues
