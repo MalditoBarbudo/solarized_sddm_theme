@@ -38,7 +38,7 @@ package contains the latest stable version.
 
 For installing in other linux distributions you must get the latest stable version
 from [github](https://github.com/MalditoBarbudo/solarized_sddm_theme/releases)
-(`0.1.6` at the moment of writing):
+(`0.1.8` at the moment of writing):
 
 ```
 # this command will download and untar the package
@@ -79,9 +79,10 @@ But be careful, some fonts really don't mix well with the theme.
 
 ## Former backgrounds
 
-With version 0.1.7 a new default background was introduced (`traces`). If you
-prefer the former backgrounds (`bars` or `circles`) you can find them in the
-theme folder as `bars_background.png` and `circles_background.png`.
+With version 0.1.8 a new default background was introduced (`ridges`). If you
+prefer the former backgrounds (`bars`, `circles` or `traces`) you can find them
+in the theme folder as `bars_background.png`, `circles_background.png` and
+`traces_background.png`.
 To use any of them change the `theme.conf` file accordingly:
 
 ```

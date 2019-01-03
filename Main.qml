@@ -91,7 +91,7 @@ Rectangle {
       Clock {
         id: clock
         //anchors.centerIn: parent
-        color: "black"
+        color: "#839496"
         timeFont.family: textFont.name
         dateFont.family: textFont.name
       }
@@ -124,7 +124,7 @@ Rectangle {
             font.family: textFont.name
             font.bold: true
             font.pixelSize: 16
-            color: "black"
+            color: "#839496"
           }
 
           TextBox {
@@ -135,7 +135,7 @@ Rectangle {
             //font.pixelSize: 16
             color: "#25000000"
             borderColor: "transparent"
-            textColor: "black"
+            textColor: "#839496"
 
             Keys.onPressed: {
               if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
@@ -153,6 +153,7 @@ Rectangle {
             text: textConstants.prompt
             font.family: textFont.name
             font.pixelSize: 12
+            color: "#839496"
           }
         }
 
@@ -170,7 +171,7 @@ Rectangle {
             font.family: textFont.name
             font.bold: true
             font.pixelSize: 16
-            color: "black"
+            color: "#839496"
           }
 
           PasswordBox {
@@ -181,7 +182,7 @@ Rectangle {
             //font.pixelSize: 16
             color: "#25000000"
             borderColor: "transparent"
-            textColor: "black"
+            textColor: "#839496"
             tooltipBG: "#25000000"
             tooltipFG: "#dc322f"
             image: "warning_red.png"
