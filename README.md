@@ -1,3 +1,8 @@
+# IMPORTANT
+
+## THIS PROJECT IS ARCHIVED AND UNMAINTAINED
+## FOR AN UPDATED AND MAINTAINED FORK SEE https://github.com/hcartiaux/solarized_sddm_theme
+
 # Solarized theme for sddm
 
 This theme is inspired by Numix sddm theme
